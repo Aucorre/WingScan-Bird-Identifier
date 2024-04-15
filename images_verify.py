@@ -1,5 +1,6 @@
 from struct import unpack
 import os
+from vars import image_folder
 
 
 marker_mapping = {
@@ -20,9 +21,8 @@ class JPEG:
     
     def decode(self):
         data = self.img_data
-        while(True):
+        while True:
             marker, = unpack(">H", data[0:2])
-            # print(marker_mapping.get(marker))
             if marker == 0xffd8:
                 data = data[2:]
             elif marker == 0xffd9:
@@ -32,19 +32,25 @@ class JPEG:
             else:
                 lenchunk, = unpack(">H", data[2:4])
                 data = data[2+lenchunk:]            
-            if len(data)==0:
+            if len(data) == 0:
                 break        
 
 
 bads = []
 
+image_dir = image_folder
 
-
-for file, subdir, files in os.walk('../download/images/'):
+for file, subdir, files in os.walk(image_dir):
+    folder_name = os.path.basename(file)  # Obtenir le nom du dossier parent
     for img in files:
-        image = os.path.join(file,img)
-        image = JPEG(image) 
+        image_path = os.path.join(file, img)
+        image = JPEG(image_path) 
         try:
-            image.decode()   
+            image.decode()
+            print(folder_name + "/" + img + " is a valid image") 
         except:
-            bads.append(img)
+            bads.append(os.path.join(file, img))
+            print(folder_name + "/" + img + " is not a valid image")
+
+print(bads)
+print(len(bads))
