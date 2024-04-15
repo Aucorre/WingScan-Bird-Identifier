@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 # Chemin vers le dossier contenant tes images
-image_directory = '../download/images/'
+image_directory = 'C:\\Users\emman\Desktop\YNOV\B3\Projet_Data\\birdsnap\download\images'
 
 cpt = 0
 # Parcourir toutes les images dans le dossier
