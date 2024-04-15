@@ -30,9 +30,9 @@ validation_dataset = tf.keras.preprocessing.image_dataset_from_directory(
     batch_size=256)
 
 
-AUTOTUNE = tf.data.experimental.AUTOTUNE
-train_dataset = train_dataset.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
-validation_dataset = validation_dataset.cache().prefetch(buffer_size=AUTOTUNE)
+# AUTOTUNE = tf.data.experimental.AUTOTUNE
+# train_dataset = train_dataset.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
+# validation_dataset = validation_dataset.cache().prefetch(buffer_size=AUTOTUNE)
 
 
 # train_datagen = ImageDataGenerator(
