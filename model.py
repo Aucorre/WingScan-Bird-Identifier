@@ -7,7 +7,7 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropou
 # from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 
-dataset_path = '../download/images/'
+dataset_path = 'C:\\Users\emman\Desktop\YNOV\B3\Projet_Data\\birdsnap\download\images'
 
 log_dir = "../logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 tensorboard_callback = TensorBoard(log_dir=log_dir, histogram_freq=1)
@@ -19,7 +19,7 @@ train_dataset = tf.keras.preprocessing.image_dataset_from_directory(
     subset="training",
     seed=123,
     image_size=(150, 150),
-    batch_size=256)
+    batch_size=128)
 
 validation_dataset = tf.keras.preprocessing.image_dataset_from_directory(
     dataset_path,
@@ -27,12 +27,12 @@ validation_dataset = tf.keras.preprocessing.image_dataset_from_directory(
     subset="validation",
     seed=123,
     image_size=(150, 150),
-    batch_size=256)
+    batch_size=128)
 
 
-AUTOTUNE = tf.data.experimental.AUTOTUNE
-train_dataset = train_dataset.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
-validation_dataset = validation_dataset.cache().prefetch(buffer_size=AUTOTUNE)
+# AUTOTUNE = tf.data.experimental.AUTOTUNE
+# train_dataset = train_dataset.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
+# validation_dataset = validation_dataset.cache().prefetch(buffer_size=AUTOTUNE)
 
 
 # train_datagen = ImageDataGenerator(
