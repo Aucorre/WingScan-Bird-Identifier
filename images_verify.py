@@ -39,10 +39,12 @@ class JPEG:
 bads = []
 
 
-for img in os.listdir('../download/images/'):
-    image = os.path.join('../download/images/',img)
-    image = JPEG(image) 
-    try:
-        image.decode()   
-    except:
-        bads.append(img)
+
+for file, subdir, files in os.walk('../download/images/'):
+    for img in files:
+        image = os.path.join(file,img)
+        image = JPEG(image) 
+        try:
+            image.decode()   
+        except:
+            bads.append(img)
