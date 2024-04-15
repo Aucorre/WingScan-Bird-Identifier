@@ -1,5 +1,6 @@
 from struct import unpack
 import os
+from vars import image_folder
 
 
 marker_mapping = {
@@ -37,7 +38,7 @@ class JPEG:
 
 bads = []
 
-image_dir = 'C:\\Users\emman\Desktop\YNOV\B3\Projet_Data\\birdsnap\download\images'
+image_dir = image_folder
 
 for file, subdir, files in os.walk(image_dir):
     folder_name = os.path.basename(file)  # Obtenir le nom du dossier parent
