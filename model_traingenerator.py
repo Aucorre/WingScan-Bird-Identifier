@@ -7,8 +7,9 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from vars import dataset_path, classes
 
-dataset_path = './download/'
+dataset_path = dataset_path
 
 log_dir = "./logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 tensorboard_callback = TensorBoard(log_dir=log_dir, histogram_freq=1)
@@ -54,7 +55,7 @@ model = Sequential([
     Flatten(),
     Dropout(0.2),
     Dense(512, activation='relu'),
-    Dense(126, activation='softmax')
+    Dense(classes, activation='softmax')
 ])
 
 model.summary()
