@@ -28,6 +28,8 @@ Nos données proviennent d'un étude produite par Thomas Berg : [Birdsnap](https
 
 Un script python pour récupérer et trier toutes les images était fourni dans le travail initial (**GetData.py**). Nous avons commencé par revoir rapidement ce script pour inclure du multithreading afin d'accélérer la récupération des images, nous avons ensuite utilisé la librairie Pillow pour s'assurer de la conformité de chaque image enregistrée car nous avions des fichiers jpeg corrompus.
 
+[Dataset disponible sur Kaggle](https://www.kaggle.com/datasets/emmanueljova/birdspecies)
+
 ## Modèles avec 100 classes :
 
 - MobileNetV2
