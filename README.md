@@ -35,8 +35,6 @@ Un script python pour récupérer et trier toutes les images était fourni dans 
 - ResNet50 
 
 ## Modèles avec 126 classes :
-
-<<<<<<< HEAD
 - MobileNetV3 précision : 348/1975 (17.6%) dans le top 3 des prédictions
 - MobileNetV2 avec ajout de bruit Gaussien précision : 996/1975 (50.4%) dans le top 3 prédictions, la précision de validation est de 30.3%
 - MobileNetV2 avec 4 dernières couches entrainables précision : 977/1975 (49.5%) dans le top 3 prédictions, la précision de validation est de 29.67%
@@ -48,25 +46,17 @@ Un script python pour récupérer et trier toutes les images était fourni dans 
 - DenseNet169 précision : 26.18% de précision de validation 3355/7923 (42.3%) dans le top 3 des prédictions
 - DenseNet201 précision : 28.9% de précision de validation 3636/7923 (45.9%) dans le top 3 des prédictions
 - DenseNet169 avec format d'image en 224x224 précision : 35.31% de précision de validation 4439/7923 (56.0%) dans le top 3 des prédictions
-=======
-MobileNetV3 précision : 348/1975 (17.6%) dans le top 3 des prédictions
-
-MobileNetV2 avec ajout de bruit Gaussien précision : 996/1975 (50.4%) dans le top 3 prédictions, la précision de validation est de 30.3%
-
-MobileNetV2 avec 4 dernières couches entrainables précision : 977/1975 (49.5%) dans le top 3 prédictions, la précision de validation est de 29.67%
+- MobileNetV3 précision : 348/1975 (17.6%) dans le top 3 des prédictions
+- MobileNetV2 avec ajout de bruit Gaussien précision : 996/1975 (50.4%) dans le top 3 prédictions, la précision de validation est de 30.3%
+- MobileNetV2 avec 4 dernières couches entrainables précision : 977/1975 (49.5%) dans le top 3 prédictions, la précision de validation est de 29.67%
 
 ## Modèles avec 500 classes :
 
-VGG16 : 15.75% de précision de validation, 2231/7923 (28.15%) dans le top 3 des prédictions
-
-ResNet101V2 précision : 16.72% de précision de validation, 2316/7923 (29.2%) dans le top 3 des prédictions
-
-DenseNet169 précision : 26.18% de précision de validation 3355/7923 (42.3%) dans le top 3 des prédictions
-
-DenseNet201 précision : 28.9% de précision de validation 3636/7923 (45.9%) dans le top 3 des prédictions
-
-DenseNet169 avec format d'image en 224x224 précision : 35.31% de précision de validation 4439/7923 (56.0%) dans le top 3 des prédictions
->>>>>>> eb2507d7febd31f6279bd3d0b695d4f324427754
+- VGG16 : 15.75% de précision de validation, 2231/7923 (28.15%) dans le top 3 des prédictions
+- ResNet101V2 précision : 16.72% de précision de validation, 2316/7923 (29.2%) dans le top 3 des prédictions
+- DenseNet169 précision : 26.18% de précision de validation 3355/7923 (42.3%) dans le top 3 des prédictions
+- DenseNet201 précision : 28.9% de précision de validation 3636/7923 (45.9%) dans le top 3 des prédictions
+- DenseNet169 avec format d'image en 224x224 précision : 35.31% de précision de validation 4439/7923 (56.0%) dans le top 3 des prédictions
 
 ## Modèle final :
 
