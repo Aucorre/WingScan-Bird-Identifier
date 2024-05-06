@@ -9,6 +9,8 @@ Nos données proviennent d'un étude produite par Thomas Berg : [Birdsnap](https
 ## Modèles étudiés :
 - MobileNetV2
 - ResNet50
-- DenseNet201
+- DenseNet169
 - BaseNet
 - EfficientNetB0
+
+## Travail sur les données :
