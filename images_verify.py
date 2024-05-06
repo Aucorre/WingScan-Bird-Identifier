@@ -54,3 +54,5 @@ for file, subdir, files in os.walk(image_dir):
 
 print(bads)
 print(len(bads))
+
+
