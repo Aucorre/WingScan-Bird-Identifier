@@ -16,13 +16,13 @@ Nos données proviennent d'un étude produite par Thomas Berg : [Birdsnap](https
 
 ---
 
-- MobileNetV2
-- MobileNetV3
-- ResNet101V2
-- DenseNet169
-- DenseNet201
-- BaseNet
-- EfficientNetB0
+- [MobileNetV2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/MobileNetV2)
+- [MobileNetV3](https://pytorch.org/vision/main/models/generated/torchvision.models.mobilenet_v3_small.html#torchvision.models.mobilenet_v3_small)
+- [ResNet101V2](https://www.tensorflow.org/api_docs/python/tf/keras/applications/ResNet101V2)
+- [DenseNet169](https://pytorch.org/vision/main/models/generated/torchvision.models.densenet169.html)
+- [DenseNet201](https://pytorch.org/vision/main/models/generated/torchvision.models.densenet201.html)
+- [BaseNet](https://pypi.org/project/basenet-api/1.2.0/)
+- [EfficientNetB0](https://keras.io/api/applications/efficientnet/)
 
 ## Travail sur les données :
 
@@ -31,16 +31,20 @@ Un script python pour récupérer et trier toutes les images était fourni dans 
 [Dataset disponible sur Kaggle](https://www.kaggle.com/datasets/emmanueljova/birdspecies)
 
 ## Modèles avec 100 classes :
+> **Python 3.9 & Tensorflow 2.10**
 
 - MobileNetV2 avec ajout de bruit de Gaussien (images 200x200 / 12 epoch / LR =  0,001 / Split 0.2 / Batchsize 64): précision 30.3%, précision de validation pas encore ajoutée
 - EfficentNetB0  (images 224x224 / 10 epoch / LR =  0,001 / Split 0.2 / Batchsize 32) : précision 33.2%, précision de validation 15.7%
 
 ## Modèles avec 126 classes :
+> **Python 3.9 & Tensorflow 2.10**
+
 - MobileNetV3 précision (images 150x150 / 15 epoch / LR =  0,001 / Split 0.2 / Batchsize 50&75) : 348/1975 (17.6%) dans le top 3 des prédictions
 - MobileNetV2 avec ajout de bruit Gaussien précision (images 150x150 / 15 epoch / LR =  0,001 / Split 0.2 / Batchsize 50&75) : 996/1975 (50.4%) dans le top 3 prédictions, la précision de validation est de 30.3%
 - MobileNetV2 avec 4 dernières couches entrainables précision (images 150x150 / 15 epoch / LR =  0,001 / Split 0.2 / Batchsize 50&75) : 977/1975 (49.5%) dans le top 3 prédictions, la précision de validation est de 29.67%
 
 ## Modèles avec 500 classes :
+> **Python 3.11 & Tensorflow 2.15**
 
 - VGG16 : 15.75% de précision de validation, 2231/7923 (28.15%) dans le top 3 des prédictions
 - ResNet101V2 précision : 16.72% de précision de validation, 2316/7923 (29.2%) dans le top 3 des prédictions
@@ -52,5 +56,6 @@ Un script python pour récupérer et trier toutes les images était fourni dans 
 - MobileNetV2 avec 4 dernières couches entrainables précision : 977/1975 (49.5%) dans le top 3 prédictions, la précision de validation est de 29.67%
 
 ## Modèle final :
+> **Python 3.11 & Tensorflow 2.15**
 
 - DenseNet169 avec format d'image en 224x224, batch normalization, dropout et data augmentation. Précision de validation : 42.63% de précision de validation 5054/7923 (63.79%) dans le top 3 des prédictions
